@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Sidebar 02</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<div class="custom-menu">
+				<button type="button" id="sidebarCollapse" class="btn btn-primary">
+					<i class="fa fa-bars"></i>
+					<span class="sr-only">Toggle Menu</span>
+				</button>
+			</div>
+			<div id="addcategory" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<form>
+							<div class="modal-header">
+								<h4 class="modal-title">ajouter une categorie</h4>
+								<button type="button" class="close" data-dismiss="modal"
+									aria-hidden="true">&times;</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group">
+									<label>Nom de produit</label>
+									<input type="text" id="nameproduit" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label>prix</label>
+									<input type="email" id="prix" class="form-control" required>
+								</div>
+
+							</div>
+							<div class="modal-footer">
+								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+								<input type="submit" id="SaveData" class="btn btn-info" value="Add">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="p-4 pt-5">
+				<h1><a href="index2.html" class="logo">Home</a></h1>
+				<ul class="list-unstyled components mb-5">
+					<li>
+						<a href="index.ejs"><i class="">&#xE147;</i> <span>categories</span></a>
+					</li>
+					<li class="active">
+						<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
+							class="dropdown-toggle">Home</a>
+						<ul class="collapse list-unstyled" id="homeSubmenu">
+							<li>
+								<a href="#">Home 1</a>
+							</li>
+							<li>
+								<a href="#">Home 2</a>
+							</li>
+							<li>
+								<a href="#">Home 3</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+
+						<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+							class="dropdown-toggle">Pages</a>
+						<ul class="collapse list-unstyled" id="pageSubmenu">
+							<li>
+								<a href="#">Page 1</a>
+							</li>
+							<li>
+								<a href="#">Page 2</a>
+							</li>
+							<li>
+								<a href="#">Page 3</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Portfolio</a>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+
+				<div class="mb-5">
+					<h3 class="h6">Subscribe for newsletter</h3>
+					<form action="#" class="colorlib-subscribe-form">
+						<div class="form-group d-flex">
+							<div class="icon"><span class="icon-paper-plane"></span></div>
+							<input type="text" class="form-control" placeholder="Enter Email Address">
+						</div>
+					</form>
+				</div>
+
+		
+
+			</div>
+		</nav>
+
+		<!-- Page Content  -->
+		<div id="content" class="">
+			<div class="container">
+				<div class="table-wrapper">
+					<div class="table-title">
+						<div class="row">
+							<div class="col-sm-6">
+								<h2><b>produits</b></h2>
+							</div>
+							<div class="col-sm-6">
+								<a href="#addEmployeeModal" class="btn btn-info" data-toggle="modal"><i
+										class="material-icons">&#xE147;</i> <span>ajouter un produit</span></a>
+
+							</div>
+						</div>
+					</div>
+					<table class="table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>nom de produit</th>
+								<th>prix</th>
+								<th>categorie</th>
+								<th>action</th>
+							</tr>
+						</thead>
+						<tbody id="TableEmployes">
+							
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+			<!-- Edit Modal HTML -->
+			<div id="addEmployeeModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<form>
+							<div class="modal-header">
+								<h4 class="modal-title">ajouter un produit</h4>
+								<button type="button" class="close" data-dismiss="modal"
+									aria-hidden="true">&times;</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group">
+									<label>Nom de produit</label>
+									<input type="text" id="nameproduit" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label>prix</label>
+									<input type="email" id="prix" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label>categorie</label>
+									<textarea class="form-control" id="categorie" required></textarea>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+								<input type="submit" id="SaveData" class="btn btn-info" value="Add">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Edit Modal HTML -->
+			<div id="editEmployeeModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<form>
+							<div class="modal-header">
+								<h4 class="modal-title">Edit Employee</h4>
+								<button type="button" class="close" data-dismiss="modal"
+									aria-hidden="true">&times;</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group">
+									<label>Nom de prpduit</label>
+									<input type="text" id="nameupdate" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label>prix</label>
+									<input type="email" id="prixupdate" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label>categorie</label>
+									<textarea class="form-control" id="categorieupdate" required></textarea>
+								</div>
+
+								<div class="modal-footer">
+									<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+									<input type="submit" id="Supdate" class="btn btn-info" value="Save">
+								</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Delete Modal HTML -->
+			<div id="deleteEmployeeModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<form>
+							<div class="modal-header">
+								<h4 class="modal-title">suppr un produit</h4>
+								<button type="button" class="close" data-dismiss="modal"
+									aria-hidden="true">&times;</button>
+							</div>
+							<div class="modal-body">
+								<p>Are you sure you want to delete these Records?</p>
+								<p class="text-warning"><small>This action cannot be undone.</small></p>
+							</div>
+							<div class="modal-footer">
+								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+								<input type="submit" id="Delete" class="btn btn-danger" value="Delete">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+	<script>
+		   $(document).ready(function() {
+			getData();
+		
+		});
+
+		//function get data 
+function getData(){
+$.ajax({
+url:'/productList',
+type:'GET',
+success:function(response){
+	  if(response){
+
+	var product_Data = '';
+	
+	$("#TableEmployes").html(product_Data);
+	$.each(response.result, function (index, value) {
+	  product_Data += '	<tr>';
+	  product_Data += '<th>' + value.nom + '</th>';
+	  product_Data += '<th>' + value.prix + '</th>';
+	  product_Data += '<th>' + value.idcategorie + '</th>';
+	  product_Data += `<button type="button" data-toggle="modal" data-target="#UpdatePopUp" data-uid="1" onclick="show(${index},'${value.name}','${value.Description}','${value.Status}')" class="update btn btn-warning btn-sm"><span class="fa fa-pencil"></span></button>`;
+	  product_Data += ' <button type="button" data-toggle="modal" data-target="#DeletePopUp" data-uid="1" onclick="show(' + index +')"  class="update btn btn-warning btn-sm"><span class="fa fa-trash"></span></button>';
+	  product_Data += '</tr>';
+	});
+	  }
+	$("#TableEmployes").append(product_Data);
+}
+})
+}
+	</script>
+</body>
+
+</html>

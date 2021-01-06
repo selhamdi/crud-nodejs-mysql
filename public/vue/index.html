@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <link rel = "stylesheet" href="style.css">
+  <title> My Form </title>
+</head>
+<style>
+body{
+ background-color: #cce6ff;
+}
+header{
+ text-align: center;
+ height: 100px;
+ padding-top: 1px;
+ background-color: #3399ff;
+ color: #FFFFFF;
+ font-size: x-large;
+}
+h3{
+ margin-top: 2px;
+ text-align: center;
+ background-color: #80bfff;
+}
+form{
+ width: 45%;
+ display: inline-block;
+ margin: 20px;
+}
+footer{
+ margin-top: 3%;
+ text-align: center;
+}
+</style> 
+</head>
+<body>
+    <form action="/add" method="POST">
+        <fieldset>
+          <h3>Add new employee</h3>
+          <label>Employee ID</label>
+          <input type ="text" id = 'empID' name="id" required>
+          <br><br>
+          <label>Name</label>
+          <input type="text" id = "name" name="name" required>
+          <br><br>
+          <button type ="reset">Reset</button>
+          <button type ="submit">Submit</button>
+        </fieldset>
+      </form>
+    <form action="/view" method="POST">
+        <fieldset>
+          <h3>View an employee</h3>
+          <label>Employee ID</label>
+          <input type="text" id="empID" name="id" required>
+          <br><br>
+          <button type ="reset">Reset</button>
+          <button type ="submit">Submit</button>
+          <br><br><br>
+        </fieldset>
+       </form>
+
+       <form action="/update" method="POST">
+        <fieldset>
+          <h3>Update an employee</h3>
+          <label>Employee ID</label>
+          <input type ="text" id = 'empID' name="id" required>
+          <br><br>
+          <label>New Name</label>
+          <input type="text" id = "name" name="name" required>
+          <br><br>
+          <button type ="reset">Reset</button>
+          <button type ="submit">Submit</button>
+        </fieldset>
+       </form>
+      <form action="/delete" method="POST">
+        <fieldset>
+          <h3>Delete an employee</h3>
+          <label>Employee ID</label>
+          <input type ="text" id = 'empID' name="id" required>
+          <br><br>
+          <button type ="reset">Reset</button>
+          <button type ="submit">Submit</button>
+          <br><br><br>
+        </fieldset>
+       </form>
+       <footer>
+        <hr>
+        <h4>Please enter 'http://localhost:3000/close' to close the   database connection before closing this window</h4>
+      </footer>
+    </body>
+  </html>

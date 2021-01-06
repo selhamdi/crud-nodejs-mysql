@@ -1,0 +1,23 @@
+{
+  "name": "e-com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "salima",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "espress": "0.0.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.6",
+    "opn": "^6.0.0",
+    "save": "^2.4.0",
+    "sqlite3": "^5.0.0"
+  }
+}
